@@ -19,5 +19,5 @@ app.get('/lightsOff', function (req, res) { \n\
 \n\
 var server = app.listen(1620, function () { \n\
   console.log('Webserver Started'); \n\
-}); " > start.js
+}); " > /web/start.js
 ENTRYPOINT nodejs /web/start.js
