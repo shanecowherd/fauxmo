@@ -4,21 +4,20 @@ apt-get install nodejs npm -y && \
 mkdir web && \
 cd web && \
 npm install express
-RUN echo "var express = require('express'); " + \
-"var app = express(); " + \
-\
-"app.get('/lightsOn', function (req, res) { " + \
-"    console.log('Turning the lights on'); " + \
-"    res.send('Turning the lights on'); " + \
-"}); " + \
-\
-"app.get('/lightsOff', function (req, res) { " + \
-"    console.log('Turning the lights off'); " + \
-"    res.send('Turning the lights off'); " + \
-"}); " + \
-\
-"var server = app.listen(1620, function () { " + \
-"  console.log('Webserver Started'); " + \
-"}); " > start.js
-EXPOSE 1620
+RUN echo "var express = require('express'); \n\
+var app = express(); \n\
+\n\
+app.get('/lightsOn', function (req, res) { \n\
+    console.log('Turning the lights on'); \n\
+    res.send('Turning the lights on'); \n\
+}); \n\
+\n\
+app.get('/lightsOff', function (req, res) { \n\
+    console.log('Turning the lights off'); \n\
+    res.send('Turning the lights off'); \n\
+}); \n\
+\n\
+var server = app.listen(1620, function () { \n\
+  console.log('Webserver Started'); \n\
+}); " > start.js
 ENTRYPOINT nodejs /web/start.js
