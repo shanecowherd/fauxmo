@@ -3,8 +3,8 @@ RUN apt-get update && \
 apt-get install nodejs npm -y && \
 mkdir web && \
 cd web && \
-npm install express && \
-echo "var express = require('express'); " + \
+npm install express
+RUN echo "var express = require('express'); " + \
 "var app = express(); " + \
 \
 "app.get('/lightsOn', function (req, res) { " + \
