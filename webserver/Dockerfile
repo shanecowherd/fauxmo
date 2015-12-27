@@ -16,10 +16,8 @@ app.get('/lightsOn', function (req, res) { \n\
 }); \n\
 \n\
 app.get('/lightsOff', function (req, res) { \n\
-    exec('wemo light \"Shanes Light\" on'); \n\
-    exec('wemo light \"Megans Light\" on'); \n\
-    exec('wemo light \"Shanes Light\" off'); \n\
-    exec('wemo light \"Megans Light\" off'); \n\
+    exec('wemo light \"Shanes Light\" on 0'); \n\
+    exec('wemo light \"Megans Light\" on 0'); \n\
     console.log('Turning the lights off'); \n\
     res.send('Turning the lights off'); \n\
 }); \n\
