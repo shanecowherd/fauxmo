@@ -1,9 +1,14 @@
-### Setup to run in a docker container
+### Setup to run wemo emulator in a docker container
 
 `git clone http://www.github.com/shanecowherd/fauxmo && cd fauxmo && sh setup.sh`
 
 Then to run: `start.sh`
 
+### Setup to run webserver for responding to wemo emulator in a docker container
+
+`git clone http://www.github.com/shanecowherd/fauxmo && cd fauxmo/webserver && sh setup.sh`
+
+Then to run: `start.sh`
 
 # fauxmo
 **Emulated Belkin WeMo devices that work with the Amazon Echo**
